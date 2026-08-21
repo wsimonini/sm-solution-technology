@@ -508,7 +508,7 @@ export default function Site() {
               <img
                 src={LOGO_SRC}
                 alt="SM Solution Technology"
-                className="h-28 sm:h-32 w-auto object-contain"
+                className="h-36 sm:h-40 w-auto object-contain"
               />
               <span className="sm-badge">
                 <span className="sm-dot" /> TI &amp; automação para empresas e condomínios
