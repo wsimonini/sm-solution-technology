@@ -22,6 +22,8 @@ import {
 } from "lucide-react";
 
 const LOGO_SRC = "/logo.png";
+const LOGOTRANSPARENT_SRC = "/logo-transparent.png";
+
 
 /* ---------------------------------------------------------
    Reveal-on-scroll hook — powers the fade/rise-in animations
@@ -506,7 +508,7 @@ export default function Site() {
           <Reveal>
             <div className="flex flex-col items-center text-center gap-7 pt-6 pb-4">
               <img
-                src={LOGO_SRC}
+                src={LOGOTRANSPARENT_SRC}
                 alt="SM Solution Technology"
                 className="h-36 sm:h-40 w-auto object-contain"
               />
