@@ -698,21 +698,21 @@ export default function Site() {
                 <div className="flex items-center gap-3.5">
                   <div className="sm-icon-wrap !w-11 !h-11"><Phone size={18} className="sm-green" /></div>
                   <div>
-                    <p className="text-sm font-medium">(11) 4000-0000</p>
+                    <p className="text-sm font-medium">(11) 98454-0495</p>
                     <p className="sm-text-dim text-xs">Seg. a sex., 9h às 18h</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3.5">
                   <div className="sm-icon-wrap !w-11 !h-11"><Mail size={18} className="sm-green" /></div>
                   <div>
-                    <p className="text-sm font-medium">contato@smsolution.tech</p>
+                    <p className="text-sm font-medium">condoconnect3@gmail.com</p>
                     <p className="sm-text-dim text-xs">Resposta em até 24h</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-3.5">
                   <div className="sm-icon-wrap !w-11 !h-11"><MapPin size={18} className="sm-green" /></div>
                   <div>
-                    <p className="text-sm font-medium">Santana de Parnaíba, SP</p>
+                    <p className="text-sm font-medium">São Paulo, SP</p>
                     <p className="sm-text-dim text-xs">Atendimento presencial sob agendamento</p>
                   </div>
                 </div>
