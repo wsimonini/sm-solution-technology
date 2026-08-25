@@ -12,6 +12,7 @@ import {
   Mail,
   Phone,
   MapPin,
+  CalendarDays,
   ArrowRight,
   Instagram,
   Linkedin,
@@ -106,6 +107,7 @@ const NAV_LINKS = [
   { id: "home", label: "Início" },
   { id: "sobre", label: "Sobre nós" },
   { id: "servicos", label: "Serviços" },
+  { id: "modulos", label: "Módulos" },
   { id: "portfolio", label: "Cases" },
   { id: "contato", label: "Contato" },
 ];
@@ -128,6 +130,65 @@ const SERVICES = [
     title: "Automação de processos",
     desc: "Eliminamos tarefas repetitivas com integrações e fluxos automatizados, liberando o seu time para o que realmente importa.",
     points: ["Integração de sistemas", "Fluxos automatizados", "Relatórios em tempo real"],
+  },
+];
+
+const MODULES = [
+  {
+    icon: Building2,
+    number: "01",
+    title: "Gestão condominial",
+    desc: "Centralize a rotina administrativa, documentos, comunicados e indicadores do condomínio.",
+    benefit: "Mais controle e menos planilhas espalhadas.",
+  },
+  {
+    icon: ShieldCheck,
+    number: "02",
+    title: "Portaria e acesso",
+    desc: "Organize entradas de moradores, visitantes, prestadores e encomendas com mais segurança.",
+    benefit: "Rastreabilidade para cada acesso ao condomínio.",
+  },
+  {
+    icon: CalendarDays,
+    number: "03",
+    title: "Reservas de áreas",
+    desc: "Permita que moradores reservem espaços comuns com regras, horários e confirmação em um só lugar.",
+    benefit: "Convivência mais transparente e organizada.",
+  },
+  {
+    icon: MessageCircle,
+    number: "04",
+    title: "Comunicação com moradores",
+    desc: "Envie avisos segmentados e mantenha todos informados sobre a vida do condomínio.",
+    benefit: "Informação certa, no momento certo.",
+  },
+  {
+    icon: Mail,
+    number: "05",
+    title: "Financeiro e cobranças",
+    desc: "Acompanhe receitas, despesas, inadimplência e cobranças com uma visão financeira mais clara.",
+    benefit: "Decisões baseadas em números atualizados.",
+  },
+  {
+    icon: Network,
+    number: "06",
+    title: "Manutenção e chamados",
+    desc: "Registre solicitações, acompanhe prazos e dê visibilidade ao andamento de cada atendimento.",
+    benefit: "Problemas resolvidos com histórico e prioridade.",
+  },
+  {
+    icon: CheckCircle2,
+    number: "07",
+    title: "Assembleias e votações",
+    desc: "Facilite convocações, pautas e decisões coletivas com mais participação dos moradores.",
+    benefit: "Mais participação nas decisões do condomínio.",
+  },
+  {
+    icon: Cpu,
+    number: "08",
+    title: "Relatórios e automações",
+    desc: "Transforme dados da operação em relatórios e automatize tarefas repetitivas da administradora.",
+    benefit: "Tempo devolvido para o que realmente importa.",
   },
 ];
 
@@ -362,6 +423,20 @@ export default function Site() {
           display: flex; align-items: center; justify-content: center;
           background: linear-gradient(135deg, rgba(47,111,255,0.18), rgba(57,255,158,0.12));
           border: 1px solid var(--sm-border);
+        }
+        .sm-module-number {
+          color: var(--sm-text-dim);
+          font-family: var(--sm-font-display);
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          padding-top: 0.2rem;
+        }
+        .sm-modules-benefits {
+          border: 1px solid var(--sm-border);
+          border-left: 3px solid var(--sm-green);
+          background: linear-gradient(110deg, rgba(47,111,255,0.1), rgba(57,255,158,0.04));
+          border-radius: 16px;
         }
 
         .sm-circuit-divider { width: 100%; line-height: 0; margin: 0 auto; max-width: 1200px; padding: 0 1rem; }
@@ -633,6 +708,71 @@ export default function Site() {
       </section>
 
       <CircuitDivider />
+
+      {/* ================= MÓDULOS ================= */}
+      <section id="modulos" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
+        <Reveal>
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="sm-section-label">Módulos da plataforma</span>
+            <h2 className="sm-font-display font-bold text-3xl sm:text-4xl mt-3 mb-4 leading-tight">
+              Tudo o que o seu condomínio precisa, em um só lugar
+            </h2>
+            <p className="sm-text-dim">
+              Uma plataforma completa para simplificar a administração, aproximar moradores e
+              dar mais eficiência para a sua equipe.
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {MODULES.map((module, i) => {
+            const Icon = module.icon;
+            return (
+              <Reveal key={module.title} delay={i * 70}>
+                <article className="sm-card p-5 h-full flex flex-col">
+                  <div className="flex items-start justify-between gap-3 mb-5">
+                    <div className="sm-icon-wrap !w-11 !h-11">
+                      <Icon size={21} className="sm-blue" />
+                    </div>
+                    <span className="sm-module-number">{module.number}</span>
+                  </div>
+                  <h3 className="sm-font-display font-semibold text-lg mb-2 leading-snug">
+                    {module.title}
+                  </h3>
+                  <p className="sm-text-dim text-sm leading-relaxed mb-5">{module.desc}</p>
+                  <p className="sm-green text-sm font-medium mt-auto flex items-start gap-2">
+                    <CheckCircle2 size={16} className="flex-shrink-0 mt-0.5" />
+                    {module.benefit}
+                  </p>
+                </article>
+              </Reveal>
+            );
+          })}
+        </div>
+
+        <Reveal delay={180}>
+          <div className="sm-modules-benefits mt-14 p-6 sm:p-8">
+            <div className="grid md:grid-cols-[1fr_auto] gap-7 items-center">
+              <div>
+                <span className="sm-section-label">Benefícios da assinatura</span>
+                <h3 className="sm-font-display font-semibold text-2xl mt-3 mb-3">
+                  Uma operação mais leve para síndicos, administradoras e moradores
+                </h3>
+                <div className="grid sm:grid-cols-3 gap-4 text-sm sm-text-dim">
+                  <span className="flex items-center gap-2"><CheckCircle2 size={16} className="sm-green" /> Acesso integrado</span>
+                  <span className="flex items-center gap-2"><CheckCircle2 size={16} className="sm-green" /> Atualizações contínuas</span>
+                  <span className="flex items-center gap-2"><CheckCircle2 size={16} className="sm-green" /> Suporte especializado</span>
+                </div>
+              </div>
+              <button onClick={() => handleNavClick("contato")} className="sm-btn-primary sm-focusable justify-center whitespace-nowrap">
+                Conhecer a plataforma <ArrowRight size={17} />
+              </button>
+            </div>
+          </div>
+        </Reveal>
+      </section>
+
+      <CircuitDivider flip />
 
       {/* ================= PORTFÓLIO / CASES ================= */}
       <section id="portfolio" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 sm:py-28">
