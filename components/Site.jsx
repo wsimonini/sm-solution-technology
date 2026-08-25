@@ -24,6 +24,8 @@ import {
 
 const LOGO_SRC = "/logo.png";
 const LOGOTRANSPARENT_SRC = "/logo-transparent.png";
+const LOGOTRANSPARENTNovo_SRC = "/logo-novo.png";
+
 
 
 /* ---------------------------------------------------------
@@ -213,7 +215,7 @@ const CASES = [
 const TESTIMONIALS = [
   {
     quote:
-      "A SM Solution organizou nossa portaria e nosso financeiro em uma única plataforma. Os moradores notaram a diferença já no primeiro mês.",
+      "A MS Solution organizou nossa portaria e nosso financeiro em uma única plataforma. Os moradores notaram a diferença já no primeiro mês.",
     name: "Síndica profissional",
     role: "Condomínio em São Paulo, SP",
   },
@@ -521,11 +523,11 @@ export default function Site() {
           <button
             onClick={() => handleNavClick("home")}
             className="flex items-center gap-3 sm-focusable"
-            aria-label="SM Solution Technology — início"
+            aria-label="MS Solution Technology — início"
           >
-            <img src={LOGO_SRC} alt="Logo SM Solution Technology" className="h-9 w-9 object-contain" />
+            <img src={LOGO_SRC} alt="Logo MS Solution Technology" className="h-9 w-9 object-contain" />
             <span className="sm-font-display font-semibold text-[0.95rem] tracking-wide hidden sm:block">
-              SM SOLUTION <span className="sm-text-dim font-normal">TECHNOLOGY</span>
+              MS SOLUTION <span className="sm-text-dim font-normal">TECHNOLOGY</span>
             </span>
           </button>
 
@@ -583,8 +585,8 @@ export default function Site() {
           <Reveal>
             <div className="flex flex-col items-center text-center gap-7 pt-6 pb-4">
               <img
-                src={LOGOTRANSPARENT_SRC}
-                alt="SM Solution Technology"
+                src={LOGOTRANSPARENTNovo_SRC}
+                alt="MS Solution Technology"
                 className="h-36 sm:h-40 w-auto object-contain"
               />
               <span className="sm-badge">
@@ -624,7 +626,7 @@ export default function Site() {
                 Nascemos para simplificar a tecnologia do dia a dia
               </h2>
               <p className="sm-text-dim leading-relaxed mb-4">
-                A SM Solution Technology surgiu da constatação de que empresas e condomínios
+                A MS Solution Technology surgiu da constatação de que empresas e condomínios
                 enfrentam os mesmos problemas: processos manuais, comunicação fragmentada e
                 sistemas que não conversam entre si. Reunimos experiência em infraestrutura de TI
                 e em gestão condominial para propor um caminho mais simples.
@@ -928,8 +930,8 @@ export default function Site() {
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-12">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <button onClick={() => handleNavClick("home")} className="flex items-center gap-3 sm-focusable">
-              <img src={LOGO_SRC} alt="Logo SM Solution Technology" className="h-8 w-8 object-contain" />
-              <span className="sm-font-display font-semibold text-sm">SM SOLUTION TECHNOLOGY</span>
+              <img src={LOGO_SRC} alt="Logo MS Solution Technology" className="h-8 w-8 object-contain" />
+              <span className="sm-font-display font-semibold text-sm">MS SOLUTION TECHNOLOGY</span>
             </button>
 
             <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Links rápidos">
@@ -947,7 +949,7 @@ export default function Site() {
 
           <div className="mt-10 pt-6 border-t sm-border flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
             <p className="sm-text-dim text-xs">
-              © {new Date().getFullYear()} SM Solution Technology. Todos os direitos reservados.
+              © {new Date().getFullYear()} MS Solution Technology. Todos os direitos reservados.
             </p>
             <a href="#" className="sm-text-dim text-xs hover:underline sm-focusable">
               Política de privacidade
